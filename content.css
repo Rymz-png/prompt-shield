@@ -1,0 +1,12 @@
+#promptshield-warning{position:fixed;z-index:2147483647;right:20px;bottom:20px;width:min(380px,calc(100vw - 32px));padding:16px;border:1px solid rgba(255,255,255,.15);border-radius:17px;background:rgba(15,19,24,.97);backdrop-filter:blur(20px);color:#f4f7fa;box-shadow:0 18px 70px #0009;font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+#promptshield-warning *{box-sizing:border-box}
+#promptshield-warning .ps-title{display:flex;gap:9px;align-items:center;font-weight:750;font-size:15px;margin-bottom:8px}
+#promptshield-warning .ps-mark{display:grid;place-items:center;flex-shrink:0;width:29px;height:29px;border-radius:9px;background:#ff827e20;color:#ff9c96;font-size:18px}
+#promptshield-warning p{margin:0 0 12px;color:#c2cbd4}
+#promptshield-warning .ps-actions{display:flex;gap:7px;flex-wrap:wrap}
+#promptshield-warning button{border:0;border-radius:9px;padding:9px 11px;font:650 12px system-ui,sans-serif;cursor:pointer}
+#promptshield-warning button:focus-visible{outline:2px solid #b9f56b;outline-offset:2px}
+#promptshield-warning .ps-redact{background:#b9f56b;color:#15210c}
+#promptshield-warning .ps-send{background:#ffffff12;color:#f4f7fa;border:1px solid #ffffff20}
+#promptshield-warning .ps-cancel{background:transparent;color:#c2cbd4}
+#promptshield-warning .ps-list{font-size:11px;color:#ffb1ac;margin:0 0 13px;overflow-wrap:anywhere}

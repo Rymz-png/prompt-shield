@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PromptShield</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="brand">
+        <div class="logo"><span>✦</span></div>
+        <div><h1>PromptShield</h1><p>Local-first privacy guard</p></div>
+      </div>
+      <div class="status"><i></i> LOCAL SCAN</div>
+    </header>
+
+    <section class="intro">
+      <div class="shield">♢</div>
+      <h2>Your prompt.<br><span>Your privacy.</span></h2>
+      <p>Check for common secret patterns before sharing text with an AI.</p>
+    </section>
+
+    <label for="prompt">PROMPT TO CHECK</label>
+    <textarea id="prompt" placeholder="Paste code, logs, or a prompt here…"></textarea>
+    <div class="actions">
+      <button id="scan" class="primary">Scan prompt <span>↗</span></button>
+      <button id="clear" class="quiet" title="Clear text">Clear</button>
+    </div>
+
+    <section id="results" class="results hidden" aria-live="polite">
+      <div class="result-head"><div><p class="eyebrow">SCAN RESULTS</p><h3 id="result-title">No issues found</h3></div><span id="count" class="count">0</span></div>
+      <p id="result-copy" class="result-copy"></p>
+      <ul id="findings"></ul>
+      <div id="redact-actions" class="actions hidden">
+        <button id="redact" class="primary">Redact secrets</button>
+        <button id="copy" class="secondary">Copy safe text</button>
+      </div>
+    </section>
+
+    <footer><span class="lock">▣</span> Local scan · No PromptShield server</footer>
+  </main>
+  <script src="scanner.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
