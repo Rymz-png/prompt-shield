@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible PromptShield issue without sharing real secrets.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Never include real API keys, passwords, access tokens, cookies, or private prompt contents. Use fake test strings only.
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 130 on Windows 11
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where did it happen?
+      options:
+        - Extension popup scan
+        - Redaction / copy
+        - ChatGPT send warning
+        - Claude send warning
+        - Gemini send warning
+        - Installation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use synthetic sample values only.
+      placeholder: "1. Open... 2. Paste fake sample... 3. Click..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
